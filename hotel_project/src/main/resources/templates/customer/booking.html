@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt phòng</title>
+</head>
+
+<body>
+<h1>Đặt phòng</h1>
+<div>
+    <span>ID phòng: </span> <span th:text="${room.id}" ></span> <br>
+    <span>Tên phòng: </span> <span th:text="${room.name}" ></span> <br>
+    <span>Loại phòng: </span> <span th:text="${room.type}" ></span> <br>
+    <span>Giá phòng: </span> <span th:text="${room.price}" ></span> <br>
+    <form action="booked" method="post">
+        <input type="hidden" name="roomid" th:value="${room.id}">
+        Ngày tới: <input type="date" name="checkin" value=""><br>
+        Ngày đi: <input type="date" name="checkout" value=""><br>
+        <input type="submit" value="Đặt">
+    </form>
+</div>
+</body>
+
+</html>

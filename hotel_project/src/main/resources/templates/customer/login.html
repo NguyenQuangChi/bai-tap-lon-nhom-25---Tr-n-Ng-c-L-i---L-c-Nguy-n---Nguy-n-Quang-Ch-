@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng nhập</title>
+</head>
+<body>
+    <form action="process_login" method="post">
+        Username: <input type="text" name="username" required><br>
+        Password: <input type="password" name="password"><br>
+        <span th:text="${error}"></span><br>
+        <input type="submit" value="Đăng nhập">
+    </form>
+    <form action="register">
+        <input type="submit" value="Đăng ký">
+    </form>
+</body>
+</html>

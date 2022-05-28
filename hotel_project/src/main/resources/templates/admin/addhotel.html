@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm khách sạn</title>
+</head>
+<body>
+<h1>Nhập thông tin</h1>
+<div>
+    <form action="added_hotel" method="post">
+        Tên khách sạn:
+        <input type="text" name="name" required><br>
+        Địa chỉ:
+        <input type="text" name="address" required><br>
+        Mức sao đánh giá:
+        <input type="text" name="starLevel" required><br>
+        Mô tả:
+        <input type="text" name="description" required><br>
+        <input type="submit" value="Thêm">
+    </form>
+    <form action="admin/hotel">
+        <input type="submit" value="Trở lại">
+    </form>
+</div>
+</body>
+</html>

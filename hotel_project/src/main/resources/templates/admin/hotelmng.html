@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Danh sách Khách sạn</h1>
+    <form>
+        <table border="1">
+            <tr>
+                <th>Tên khách sạn</th>
+                <th>Địa chỉ</th>
+                <th>Mức sao đánh giá</th>
+                <th>Mô tả</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr th:each="hotel:${hotels}">
+                <th th:text="${hotel.name}"></th>
+                <th th:text="${hotel.address}"></th>
+                <th th:text="${hotel.starLevel}"></th>
+                <th th:text="${hotel.description}"></th>
+                <th><a th:href="@{'/admin/hotel/room?hotel_id=' + ${hotel.id}}">Danh sách phòng</a></th>
+                <th><a th:href="@{'/admin/hotel/delhotel?hotel_id=' + ${hotel.id}}">Xóa khách sạn</a></th>
+                <th><a th:href="@{'/admin/hotel/edithotel?hotel_id=' + ${hotel.id}}">Sửa thông tin khách sạn</a></th>
+            </tr>
+        </table>
+    </form><br>
+    <form action="hotel/add_hotel">
+        <input type="submit" value="Thêm khách sạn">
+    </form>
+</body>
+</html>

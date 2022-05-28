@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý khách sạn</title>
+</head>
+<body>
+    <h1>Bạn có chắc muốn lưu thay đổi?</h1>
+    <form action="editedhotel" method="post">
+        Tên khách sạn: <input type="text" name="name" th:value="${hotel.name}"><br>
+        Địa chỉ: <input type="text" name="address" th:value="${hotel.address}"><br>
+        Mức sao đánh giá: <input type="text" name="starLevel" th:value="${hotel.starLevel}"><br>
+        Mô tả: <input type="text" name="description" th:value="${hotel.description}"><br>
+        <input type="hidden" name="id" th:value="${hotel.id}">
+        <input type="submit" value="Có">
+    </form>
+    <form action="/admin/hotel">
+        <input type="submit" value="Không">
+    </form>
+</body>
+</html>

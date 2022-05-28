@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sách phòng</title>
+</head>
+<body>
+    <h1>Danh sách phòng</h1>
+    <form>
+        <table border="1">
+            <tr>
+                <th>Tên phòng</th>
+                <th>Loại phòng</th>
+                <th>Giá phòng</th>
+                <th>Mô tả</th>
+            </tr>
+            <tr th:each="room:${rooms}">
+                <th th:text="${room.name}"></th>
+                <th th:text="${room.type}"></th>
+                <th th:text="${room.price}"></th>
+                <th th:text="${room.description}"></th>
+                <th th:text="${room.status}"></th>
+                <th><a th:href="@{'/booking?id=' + ${room.id}}">Đặt phòng</a></th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

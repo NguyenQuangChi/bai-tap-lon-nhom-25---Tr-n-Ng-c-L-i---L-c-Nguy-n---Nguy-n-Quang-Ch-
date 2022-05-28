@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý khách sạn</title>
+</head>
+<body>
+    <h1>Bạn có chắc muốn xóa khách sạn này khỏi danh sách?</h1>
+    <form action="deledhotel" method="post">
+        <span>Tên khách sạn: </span> <span th:text="${hotel.name}" ></span> <br>
+        <span>Địa chỉ: </span> <span th:text="${hotel.address}" ></span> <br>
+        <span>Mức sao đánh giá: </span> <span th:text="${hotel.starLevel}" ></span> <br>
+        <span>Mô tả: </span> <span th:text="${hotel.description}" ></span> <br>
+        <input type="hidden" name="id" th:value="${hotel.id}">
+        <input type="submit" value="Có">
+    </form><br>
+    <form action="/admin/hotel">
+        <input type="submit" value=Không>
+    </form>
+</body>
+</html>
